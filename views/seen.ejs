@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Wert - Different Portfolio HTML Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="/stylesheets/vendor.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+</head>
+
+<body class="ish--hc1 ish--htc2">
+
+    <!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+
+
+
+
+    <div class="ish-wrapper">
+
+        <div class="ish-wrapper__inner">
+
+
+
+            <!-- header -->
+            <header class="ish-row ish-header">
+                <div class="ish-header__logo">
+                    <a class="ish-header__link" href="detail">Detail</a>
+                </div>
+                <div class="ish-header__tagline">
+                    Different Portfolio HTML Template
+                </div>
+            </header>
+            <!-- header end -->
+
+
+
+            <!-- lead -->
+            <a class="ish-row ish-fullrow ish-lead" href="detail">
+                <span class="ish-lead__caption ish-icon-up">Featured Portfolio</span>
+                <div class="ish-lead__image">
+                    <img src="images/header.jpg" alt="work in silent">
+                </div>
+                <h1 class="ish-lead__headline">
+                    <span class="ish-lead__headline-inner">Workin<br>Silent</span>
+                </h1>
+            </a>
+            <!-- lead end -->
+
+
+
+            <!-- Noi dung anh -->
+            <% seen_id.forEach(id => { %>
+            <% data.forEach(ele => { %>
+
+            <% if(id == ele._id) { %>
+                <a class="ish-portfolio-item ish--tc13 ish-portfolio-print" href="/detail.<%= ele._id %> ">
+                <div class="ish-portfolio-item__image-container">
+                <img class="ish-portfolio-item__image" src="<%= ele.picture %> " alt="business cards">
+                </div>
+                <div class="ish-portfolio-item__desc">
+                <span class="ish-portfolio-item__title"><%= ele.title %></span>
+                <span class="ish-portfolio-item__subtitle"><%= ele.subtitle %></span>
+                </div>
+                </a>
+            <% } %>
+
+            <% }) %>
+            <% }) %>
+
+
+
+            <!-- Noi dung anh -->
+
+
+
+
+
+
+
+
+
+            <script src="/javascripts/plugins/plugins.js"></script>
+            <script src="/javascripts/main.js"></script>
+
+</body>
+
+</html>
